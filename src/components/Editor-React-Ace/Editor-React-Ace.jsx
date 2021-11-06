@@ -178,7 +178,7 @@ const Editor = (props) => {
         <Grid.Column className='m-tiny'>
           <Dropdown
             onChange={changyTheme}
-            placeholder='Editor Theme'
+            placeholder={themeState}
             fluid
             selection
             options={themeSelxt}
@@ -188,7 +188,7 @@ const Editor = (props) => {
         <Grid.Column className='m-tiny'>
           <Dropdown
             onChange={changyFontSize}
-            placeholder='Font Size'
+            placeholder={fontSize}
             fluid
             selection
             options={fontSizeSelxt}
