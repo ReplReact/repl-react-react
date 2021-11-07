@@ -136,6 +136,7 @@ const Editor = (props) => {
   const [fontSize, setFontSize] = useState(44);
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
+  
  
 
   const changyTheme = (e, data) => {
