@@ -1,0 +1,28 @@
+/* padding util classes */
+.p-tiny{
+    padding:1em;
+}
+.p-lidl{
+    padding:2em;
+}
+.p-med{
+    padding:4em;
+}
+.p-big{
+    padding:6em;
+}
+
+/* margin util classes */
+.m-tiny{
+    margin:1em;
+}
+.m-lidl{
+    margin:2em;
+}
+.m-med{
+    margin:4em;
+}
+.m-big{
+    margin:6em;
+}
+
