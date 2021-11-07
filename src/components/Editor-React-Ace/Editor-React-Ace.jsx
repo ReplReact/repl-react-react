@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { render } from "react-dom";
+import Posty from "../../utils/Posty";
 
 //Ace imports---------------------------------------------------------------
 import AceEditor from "react-ace";
@@ -19,7 +20,7 @@ import "ace-builds/src-noconflict/theme-solarized_dark";
 import "ace-builds/src-noconflict/theme-solarized_light";
 
 //end ace inports-------------------------------------------------------------
-import { Dropdown, Grid, Image, Segment } from 'semantic-ui-react'
+import { Button, Dropdown, Grid, Image, Segment } from 'semantic-ui-react'
 
 const themeSelxt = [
   {
@@ -155,6 +156,11 @@ const Editor = (props) => {
     localStorage.setItem("Funk", e);
   };
 
+  const clickButt = () =>{
+    Posty({jsx:funk})
+  }
+  
+
 
   useEffect(() => {
     setHeight(window.innerHeight-450)
@@ -199,6 +205,7 @@ const Editor = (props) => {
       <AceEditor
         height={`${height}px`}
         width={`${width}px`}
+        setOptions={{ useWorker: false }}
         id='funktion'
         placeholder="console.log('hello world')"
         fontSize={parseInt(fontSize)}
@@ -211,6 +218,7 @@ const Editor = (props) => {
         name="UNIQUE_ID_OF_DIV"
         editorProps={{ $blockScrolling: true }}
       />
+      <Button onClick={clickButt} >Save</Button>
 
     </Segment>
   )
